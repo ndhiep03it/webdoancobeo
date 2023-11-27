@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://demo.codegym.vn/web/15/layout-bootstrap/?# -->
+<html lang="en"><head class="loader">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./trangchu_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./trangchu_files/css.css">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="./icon/Logo.png" type="image/logo">
+    <script src="./trangchu_files/jquery.min.js.tải xuống"></script><style type="text/css" id="operaUserStyle"></style>
+    <script src="./trangchu_files/bootstrap.min.js.tải xuống"></script>
+    <title>GIỎ HÀNG</title>
+   
+    <style>
+      body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container1 {
+            width: 70%;
+            margin: auto;
+            overflow: hidden;
+            padding: 29px;
+            background-color: #fff;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        label {
+            display: block;
+            margin: 15px 0;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .total {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #009578;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Style cho cột và hàng ngang */
+        .column {
+            display: inline-block;
+            width: 50%; /* Chia bốn cột, mỗi cột chiếm 20% chiều rộng */
+            vertical-align: top; /* Hiển thị cột theo chiều dọc */
+            padding: 10px;
+        }
+
+        /* Style cho hàng ngang */
+        .row {
+            border-bottom: 1px solid white; /* Đường kẻ giữa các hàng ngang */
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fefefe;
+            padding: 20px;
+            border: 1px solid #888;
+           
+            z-index: 1;
+        }
+
+        /* Style cho overlay (phủ đen nền khi modal hiển thị) */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            z-index: 1;
+        }
+    </style>
+    </style>
+</head>
+
+<body class="">
+    <div style="color: white; text-align: center;" class="panel-footer Colocentent">
+       <div> <img height="15px" width="15px" src="icon/check.png" alt=""> [Luôn đặt vấn đề Uy Tín lên hàng đầu]</div>
+        
+    </div>
+    
+<div class="container" style="height: auto">
+    <header class="row">
+        <div class="shopping-mall">
+            <h1></h1>
+            <h5></h5>
+        <div id="extwaiokist" style="display:none" v="pdbbg" q="48b5b2ed" c="134.2" i="140" u="79.24" s="10132303" sg="svr_09102316-ga_10132303-bai_09282317" d="1" w="false" e="" a="2" m="BMe=" vn="1gtra"><div id="extwaigglbit" style="display:none" v="pdbbg" q="48b5b2ed" c="134.2" i="140" u="79.24" s="10132303" sg="svr_09102316-ga_10132303-bai_09282317" d="1" w="false" e="" a="2" m="BMe="></div></div></div>
+       
+      
+        
+        
+    </header>
+    <nav class="navbar navbar-inverse">
+        
+        <div class="container-fluid coloheader">
+            
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="index.html"><span class=""> <img width="20px" src="icon/home.png" alt=""></span> Trang chủ</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+                <ul class="nav navbar-nav">
+                    <li class="coloheader"><a href="gioithieu.html"> <span class=""></span> <img width="20px" src="icon/apps.png" alt=""> Giới thiệu<span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class=""><img width="20px" src="icon/user.png" alt=""></span>Sản phẩm<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="doanvat.html">Đồ ăn vặt</a></li>
+                            <li><a href="douong.html">Đồ uống</a></li>
+                            <li><a href="combogiare.html">Combo giá rẻ</a></li>
+                            
+                            
+                            <li role="separator" class="divider"></li>
+                           
+                           
+                            <li></li>
+                             
+                        </ul>
+                    </li>
+                    <li><a href="lienhe.html"><span class="" ><img width="20px" src="icon/phone-call.png" alt=""></span> Liên hệ</a></li>
+                    <li><a href="tintuc.html"><span class=""><img width="20px" src="icon/tintuc.png" alt=""></span> Tin tức</a></li>
+                    <li><a href="tuyendung.html"><span class=""><img width="20px" src="icon/tuyendung.png" alt=""></span> Tuyển dụng</a></li>
+                    <li style="border-radius: 5px;background-color: #dddddd;  "><a href="cart.html"><span class=""><img width="20px" src="icon/cart.png" alt=""></span> Giỏ hàng</a></li>
+                    
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    
+                </ul>
+                
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+        <div class="container">
+            
+        </div>
+    </nav>
+    
+   
+    <div class="panel-footer Colocentent">
+        <p class="textcentent">
+            <a style="color: white;" class="" href="index.html"><span class=""> <img width="20px" src="icon/home.png" alt=""></span> Trang chủ</a>
+            <a style="color: black;" class="" href="cart.html"><span class="">></span> Giỏ hàng </a>
+        </p>
+    </div>
+ 
+    <div class="panel-footer Colocentent">
+        <p class="textcentent">Thanh toán</p>
+    </div>
+    <div id="cart">
+        <!-- Sản phẩm trong giỏ hàng sẽ được thêm vào đây bằng JavaScript -->
+    </div>
+     <form action="thanhcong.html" method="post">
+
+        <div class="row">
+   
+        
+            <article class="col-sm-12">
+                
+                <div class="col-sm-4 poly-prod">
+                    
+                    <div class="panel colomdinh">
+                        <div style="text-align: left;" class="panel-heading ">
+                           
+                                <label  for="hoten">Họ và Tên:</label>
+                                <input type="text" id="hoten" name="hoten" required>
+                    
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                    
+                                <label for="dienthoai">Điện Thoại:</label>
+                                <input type="tel" id="dienthoai" name="dienthoai" required>
+                    
+                                <label for="diachi">Địa Chỉ:</label>
+                                <textarea id="diachi" name="diachi" rows="4" required></textarea>
+                    
+                                <label for="ghichu">Ghi Chú:</label>
+                                <textarea id="ghichu" name="ghichu" rows="4"></textarea>
+                    
+                                
+                           
+                        </div>
+                       
+                            
+                          
+                       
+                    </div>
+                </div>
+                <div class="col-sm-4 poly-prod">
+                    <div class="panel colomdinh">
+                        <div style="text-align: left; justify-items: left;" class="panel-heading">
+                           
+                                <label style="color: red;">*Phương Thức Giao Hàng:(Bắt buộc)</label>
+                               
+                                <input type="radio" id="giaoHangMienPhi" name="phuongThucGiaoHang" value="Giao hàng miễn phí" onclick="showghn('Miễn phí giao hàng với đơn hàng > 500.000 VNĐ hoặc Bánh kính dưới < 5 Km (Nhắn tin Zalo 0906003264 để được hỗ trợ tốt nhất)')" checked> Giao hàng miễn phí
+                                <div id="giaohangmienphi" style=" margin-top: 10px;">
+                                    Miễn phí giao hàng với đơn hàng > 500.000 VNĐ hoặc Bánh kính dưới < 5 Km (Nhắn tin Zalo 0906003264 để được hỗ trợ tốt nhất
+                                </div>
+                                <br>
+                               
+                                <input type="radio" name="phuongThucGiaoHang" value="Giao hàng nhanh" onclick="showghmp('Giao hàng nhanh chóng nhất đến tay của khách hàng để tận hưởng những món ăn vặt của Góc Ăn Vặt CÔ BEO - Lưu ý: Có tính phí Ship theo đơn vị giao hàng ( Nhân viên sẽ liên hệ khách hàng để báo giá Ship tốt nhất)')"> Giao hàng nhanh
+                                <div id="thongTinGiaoHang" style="display: none; margin-top: 10px;">
+                                    <!-- Thông tin giao hàng sẽ hiển thị ở đây -->
+                                </div>
+                                
+                                <br>
+                    
+                                <label style="color: red;">Phương Thức Thanh Toán:(Bắt buộc)</label>
+                                <label for="shipCod">Ship COD</label>
+                                <input type="radio" id="shipCod" name="phuongThucThanhToan" value="shipCod" checked>
+                                <br>
+                                
+                                <label for="chuyenKhoan">Chuyển khoản (ATM, tại ngân hàng)</label>
+                                <input type="radio" id="chuyenKhoan" name="phuongThucThanhToan" value="chuyenKhoan">
+                                
+                           
+                        </div>
+                       
+                           
+                       
+                    </div>
+                </div>
+                <div class="col-sm-4 poly-prod">
+                    <div class="panel colomdinh">
+                        <div class="panel-heading">
+                           
+                                <div class="total">
+                                    <ul style="justify-self: left; text-align: left;">
+                                        <li><div style="text-align: left;" class="tamtinhct">Tạm tính:</div> <div style="color:black; "  id="tamtinh"> Total: $0.00</div></li>
+                                        <li><div style="text-align: left;" class="tamtinhct">Thành tiền:</div> <div style="color:rgb(255, 0, 0); "  id="total"> Total: $0.00</div></li>
+                                        
+    
+                                    </ul>
+                                    
+                                 
+                                    
+                                    <br>
+                                   
+                                   
+                                </div>
+                    
+                                <button style="border-radius: 6px;width: 300px;height: 50px;" onclick="showPaymentSuccess()">Thanh toán</button> 
+                                
+                                
+                           
+                        </div>
+                     
+                          
+                       
+                    </div>
+                </div>
+                
+            </article>  
+                      
+            </aside>
+        </div>
+
+     </form>
+    
+    <footer class="panel panel-default">
+        <div class = "panel-heading text-center">
+            
+             
+            <div class="col-sm-5 poly-prod">
+                <div class="panel colomdinh">
+                    <div class="panel- heading">
+                        <h4 class="panel_title">
+                            <br>
+                            <b style="font-size: 200%;" class="fontsizeproduct">THÔNG TIN LIÊN HỆ</b>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <img src="icon/Logo.png" height="228" width="292"></div>
+                         
+                    <div class="panel-footer">
+                       
+                       <ul style="color: black;">
+                        <div class="column-3">
+                            
+                            <div class="row"><a style="color: black; text-align: center;">GÓC ĂN VẶT BOM - CHUYÊN SỈ LẺ ĐỒ ĂN VẶT NỘI ĐỊA NHẬP KHẨU</a></div>
+                            <div class="row"><a style="color: black; text-align: center;">Địa chỉ: Vị Khê, Liên Vị, Quảng Yên, Tỉnh Quảng Ninh</a></div>
+                            <div class="row"><a style="color: black; text-align: center;">Điện thoại: 096003264 (Zalo)</a></div>
+                            <div class="row"><a style="color: black; text-align: center;">Email: doancobeo2023@gmail.com</a></div>
+                            
+                           
+                        </div>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 poly-prod">
+                <div class="panel colomdinh">
+                    <div class="panel- heading">
+                        <h4 class="panel_title">
+                            <br>
+                            <b style="font-size: 200%;" class="fontsizeproduct">SẢN PHẨM</b>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <img src="trangchu_files/sanpham.png"228" width="292"></div>
+                         
+                    <div class="panel-footer">
+                       
+                       <ul style="color: black;">
+                        <div class="column-5">
+                            
+                            <div class="row"><a style="color: black; text-align: center;" href="">ĐỒ ĂN VẶT</a></div>
+                            <div class="row"><a style="color: black; text-align: center;" href="">ĐỒ UỐNG</a></div>
+                            <div class="row"><a style="color: black; text-align: center;" href="">COMBO GIÁ RẺ</a></div>
+                            
+                           
+                        </div>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 poly-prod">
+                <div class="panel colomdinh">
+                    <div class="panel- heading">
+                        <h4 class="panel_title">
+                            <br>
+                            <b style="font-size: 200%;" class="fontsizeproduct">MẠNG XÃ HỘI</b>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <img src="trangchu_files/mangxahoi.jpg" height="100%" width="200%"></div>
+                         
+                    <div class="panel-footer">
+                       
+                       <ul style="color: black;">
+                        <div class="column-5">
+                            <a href="https://www.youtube.com/@doanvatcobeo" title="">
+                                <img  class ="" src="icon/youtube.png" height="20%" width="20%" alt="hover"> </div>                             
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61553816309567" title="">                        
+                            <img  class ="" src="icon/facebook.png" height="20%" width="20%" alt="hover"> </div>
+                                
+                            </a>
+                        </div>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+       
+        <div class = "panel-heading text-center">
+            <p style="font-size: 25px;"><b>Bản quyền thuộc Đồ Ăn Cô Beo @2023</b></p>
+            <p style="font-size: 20px;">Thành viên nhóm</p>
+             <p style="font-size: 20px;">Nguyễn Diệu Hiệp - KHMT K7C</p>
+             <p style="font-size: 20px;">Vũ Xuân Bách - KHMT K7C</p>
+             <p style="font-size: 20px;">Nguyễn Tuấn Anh - KHMT K7C</p>
+        </div>
+        <img id="award" width="80px" height="80px" src="icon/cirelogo.png" alt=""> 
+    </footer>
+    <script>
+   
+
+  window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader--hidden");
+
+  loader.addEventListener("transitionend", () => {
+    //document.body.removeChild(loader);
+  });
+});
+function updateCart() {
+            var cart = document.getElementById("cart");
+            cart.innerHTML = "";
+
+           
+             var cartItems = JSON.parse(localStorage.getItem("cart")) || []; 
+            
+
+            cartItems.forEach(function(item, index) {
+                var productDiv = document.createElement("div");
+                
+                productDiv.classList.add("product");
+                productDiv.innerHTML = `<div class="product-details"><h2 style = "width:100px" >${item.name}</h2><p style = "width:100px" >Gía tiền: ${item.price}</p></div>
+                                       <div class="quantity"><button onclick="decreaseQuantity('${item.name}')">-</button>
+                                        
+                                       <input style = "width:20%" type="text" value="${item.quantity}" readonly>
+                                       <button onclick="increaseQuantity('${item.name}')">+</button></div>
+                                       <button style = "with:100px" onclick="removeItem(${index})">Xóa sản phẩm</button>`;
+
+                cart.appendChild(productDiv);
+               
+            });
+            
+
+            updateTotal();
+            updateTotal1();
+        }
+        
+        function removeItem(index) {
+            var cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            updateCart();
+            updateCart1();
+        }
+
+        function increaseQuantity(productName) {
+            var cart = JSON.parse(localStorage.getItem("cart")) || [];
+            var item = cart.find(product => product.name === productName);
+            item.quantity++;
+            localStorage.setItem("cart", JSON.stringify(cart));
+            updateCart();
+            updateCart1();
+        }
+        
+
+        function decreaseQuantity(productName) {
+            var cart = JSON.parse(localStorage.getItem("cart")) || [];
+            var item = cart.find(product => product.name === productName);
+
+            if (item.quantity > 1) {
+                item.quantity--;
+                localStorage.setItem("cart", JSON.stringify(cart));
+                updateCart();
+                
+                updateCart1();
+            }
+        }
+        showghmp();
+        function updateTotal() {
+            var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            var total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+            document.getElementById("total").innerHTML = total.toFixed(3) + " <u>đ</u>";
+        }
+        function updateTotal1() {
+            var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            var total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+            document.getElementById("tamtinh").innerHTML =  total.toFixed(3) + " <u>đ</u>";
+        }
+
+        // Gọi hàm updateCart khi trang được load để hiển thị giỏ hàng ngay từ đầu
+        updateCart();
+        updateTotal1();
+        
+        function validateForm() {
+            var fullName = document.getElementById("fullName").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var address = document.getElementById("address").value;
+
+            if (fullName === "" || email === "" || phone === "" || address === "") {
+                alert("Vui lòng điền đầy đủ thông tin.");
+                return false; // Ngăn chặn việc submit form
+            }
+            window.location.href = "thanhcong.html";
+            return true; // Cho phép submit form nếu thông tin đã được nhập đầy đủ
+            
+        }
+
+        function showPaymentSuccess() {
+           
+            // Kiểm tra và hiển thị modal chỉ khi thông tin đã nhập đầy đủ
+            if (validateForm()) {
+               
+                // Hiển thị modal và overlay
+                document.getElementById("paymentSuccessModal").style.display = "inline";
+                document.getElementById("overlay").style.display = "inline";
+                window.location.href = "thanhcong.html";
+            }
+        }
+        function showghn(info) {
+            var thongTinGiaoHang = document.getElementById("giaohangmienphi");
+
+            if (info) {
+                thongTinGiaoHang.style.display = "block";
+                thongTinGiaoHang.innerHTML = "Thông tin giao hàng: " + info;
+            } else {
+                thongTinGiaoHang.style.display = "";
+            }
+           hideghn();
+        }
+        function showghmp(info) {
+            var thongTinGiaoHang = document.getElementById("thongTinGiaoHang");
+
+            if (info) {
+                thongTinGiaoHang.style.display = "block";
+                thongTinGiaoHang.innerHTML = "Thông tin giao hàng: " + info;
+                hideghmp();
+            } else {
+                thongTinGiaoHang.style.display = "";
+            }
+           
+
+        }
+        
+        function hidePaymentSuccess() {
+            // Ẩn modal và overlay
+            document.getElementById("paymentSuccessModal").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
+        }
+        function hideghn() {
+            // Ẩn modal và overlay document.getElementById("paymentSuccessModal").style.display = "none";
+            document.getElementById("thongTinGiaoHang").style.display = "none";
+        }
+        function hideghmp() {
+            // Ẩn modal và overlay
+            
+            document.getElementById("giaohangmienphi").style.display = "none";
+        }
+        
+        function redirectToPayment() {
+            // Thực hiện chuyển hướng đến trang thanh toán
+            window.location.href = "thanhcong.html";
+        }
+    </script>
+</div>
+
+</body></html>
