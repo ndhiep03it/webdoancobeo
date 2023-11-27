@@ -77,11 +77,6 @@
 </head>
 
 <body class="">
-    <div style="color: white; text-align: center;" class="panel-footer Colocentent">
-       <div> <img height="15px" width="15px" src="icon/check.png" alt=""> [Luôn đặt vấn đề Uy Tín lên hàng đầu]</div>
-        
-    </div>
-    
 <div class="container" style="height: auto">
     <nav class="navbar navbar-inverse">
         
@@ -106,9 +101,9 @@
                     <li class="dropdown">
                         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class=""><img width="20px" src="icon/user.png" alt=""></span>Sản phẩm<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="login.html">Đồ ăn vặt</a></li>
-                            <li><a href="login.html">Đồ uống</a></li>
-                            <li><a href="login.html">Combo giá rẻ</a></li>
+                            <li><a href="doanvat.html">Đồ ăn vặt</a></li>
+                            <li><a href="douong.html">Đồ uống</a></li>
+                            <li><a href="combogiare.html">Combo giá rẻ</a></li>
                             
                             
                             <li role="separator" class="divider"></li>
@@ -131,9 +126,7 @@
                 
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
-        <div class="container">
-            
-        </div>
+       
     </nav>
     
    
@@ -143,11 +136,9 @@
             <a style="color: black;" class="" href="cart.html"><span class="">></span> Giỏ hàng </a>
         </p>
     </div>
-    <div class="row">
+<div class="row">
        
 
-
-    </div>
     <div class="panel-footer Colocentent">
         <p class="textcentent">Tất cả sản phẩm</p>
     </div>
@@ -162,7 +153,7 @@
     </div>
     <div id="close" class="row">
    
-        <form action="">
+        <form action="thanhtoan.html" method="get">
             <div class="col-sm-4 poly-prod">
                 <div class="panel colomdinh">
                     <div class="panel-heading">
@@ -182,7 +173,8 @@
                                
                             </div>
                 
-                            <button style="border-radius: 6px;width: 300px;height: 50px;" onclick="showPaymentSuccess()">Thanh toán</button> 
+                            <button style="border-radius: 6px;width: 300px;height: 50px;" onclick="tabthanhtoan()">Thanh toán</button> 
+                           
                             
                             
                        
@@ -236,10 +228,10 @@
                     <div class="panel- heading">
                         <h4 class="panel_title">
                             <br>
-                            <b style="font-size: 200%;" class="fontsizeproduct">SẢN PHẨM</b>
+                            <b style="font-size: 200%;" class="fontsizeproduct">Facebook Thành Viên</b>
                         </h4>
                     </div>
-                    <div class="panel-body  icon">
+                    <div class="panel-body">
                         <img src="trangchu_files/sanpham.png"228" width="292"></div>
                          
                     <div class="panel-footer">
@@ -247,9 +239,9 @@
                        <ul style="color: black;">
                         <div class="column-5">
                             
-                            <div class="row"><a style="color: black; text-align: center;" href="">ĐỒ ĂN VẶT</a></div>
-                            <div class="row"><a style="color: black; text-align: center;" href="">ĐỒ UỐNG</a></div>
-                            <div class="row"><a style="color: black; text-align: center;" href="">COMBO GIÁ RẺ</a></div>
+                            <div class="row"><a style="color: black; text-align: center;" href="https://www.facebook.com/hiep.nguyendieu">NGUYỄN DIỆU HIỆP - KHMTK7C</a></div>
+                            <div class="row"><a style="color: black; text-align: center;" href="https://www.facebook.com/profile.php?id=100073773711769&mibextid=rS40aB7S9Ucbxw6v">VŨ XUÂN BÁCH - KHMT K7C</a></div>
+                            <div class="row"><a style="color: black; text-align: center;" href="https://www.facebook.com/profile.php?id=100039314624353">NGUYỄN TUẤN ANH - KHMTK7C</a></div>
                             
                            
                         </div>
@@ -339,6 +331,10 @@
             var cart = JSON.parse(localStorage.getItem("cart")) || [];
             cart.splice(index, 1);
             localStorage.setItem("cart", JSON.stringify(cart));
+            if(cart <=0){
+            window.location.href = "index.html";
+              
+            }
             updateCart();
             updateCart1();
         }
@@ -389,7 +385,14 @@
         function showksp(){
             document.getElementById("open").style.display = "block";
         }
-            
+          
+        function tabthanhtoan(){
+            window.location.href = "thanhtoan.html";
+        }
+        function redirectToPayment() {
+            // Thực hiện chuyển hướng đến trang thanh toán
+            window.location.href = "thanhtoan.html";
+        }
     </script>
 </div>
 

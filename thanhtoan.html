@@ -174,11 +174,6 @@
 </head>
 
 <body class="">
-    <div style="color: white; text-align: center;" class="panel-footer Colocentent">
-       <div> <img height="15px" width="15px" src="icon/check.png" alt=""> [Luôn đặt vấn đề Uy Tín lên hàng đầu]</div>
-        
-    </div>
-    
 <div class="container" style="height: auto">
     <header class="row">
         <div class="shopping-mall">
@@ -247,7 +242,7 @@
     <div class="panel-footer Colocentent">
         <p class="textcentent">
             <a style="color: white;" class="" href="index.html"><span class=""> <img width="20px" src="icon/home.png" alt=""></span> Trang chủ</a>
-            <a style="color: black;" class="" href="cart.html"><span class="">></span> Giỏ hàng </a>
+            <a style="color: black;" class="" href="thanhtoan.html"><span class="">></span> Thanh toán </a>
         </p>
     </div>
  
@@ -257,7 +252,7 @@
     <div id="cart">
         <!-- Sản phẩm trong giỏ hàng sẽ được thêm vào đây bằng JavaScript -->
     </div>
-     <form action="thanhcong.html" method="get">
+     <form action="thanhcong.html" method="">
 
         <div class="row">
    
@@ -400,7 +395,7 @@
                     <div class="panel- heading">
                         <h4 class="panel_title">
                             <br>
-                            <b style="font-size: 200%;" class="fontsizeproduct">SẢN PHẨM</b>
+                            <b style="font-size: 200%;" class="fontsizeproduct">Facebook Thành Viên</b>
                         </h4>
                     </div>
                     <div class="panel-body">
@@ -411,9 +406,9 @@
                        <ul style="color: black;">
                         <div class="column-5">
                             
-                            <div class="row"><a style="color: black; text-align: center;" href="">ĐỒ ĂN VẶT</a></div>
-                            <div class="row"><a style="color: black; text-align: center;" href="">ĐỒ UỐNG</a></div>
-                            <div class="row"><a style="color: black; text-align: center;" href="">COMBO GIÁ RẺ</a></div>
+                            <div class="row"><a style="color: black; text-align: center;" href="https://www.facebook.com/hiep.nguyendieu">NGUYỄN DIỆU HIỆP - KHMTK7C</a></div>
+                            <div class="row"><a style="color: black; text-align: center;" href="https://www.facebook.com/profile.php?id=100073773711769&mibextid=rS40aB7S9Ucbxw6v">VŨ XUÂN BÁCH - KHMT K7C</a></div>
+                            <div class="row"><a style="color: black; text-align: center;" href="https://www.facebook.com/profile.php?id=100039314624353">NGUYỄN TUẤN ANH - KHMTK7C</a></div>
                             
                            
                         </div>
@@ -504,6 +499,10 @@ function updateCart() {
             var cart = JSON.parse(localStorage.getItem("cart")) || [];
             cart.splice(index, 1);
             localStorage.setItem("cart", JSON.stringify(cart));
+            if(cart <=0){
+            window.location.href = "index.html";
+              
+            }
             updateCart();
             updateCart1();
         }
@@ -525,8 +524,7 @@ function updateCart() {
             if (item.quantity > 1) {
                 item.quantity--;
                 localStorage.setItem("cart", JSON.stringify(cart));
-                updateCart();
-                
+                updateCart();           
                 updateCart1();
             }
         }
